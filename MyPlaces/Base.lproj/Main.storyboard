@@ -97,6 +97,7 @@
                             <constraint firstItem="jkY-rT-zNs" firstAttribute="leading" secondItem="gqP-a3-Wdx" secondAttribute="leading" id="J0E-44-2ZG"/>
                             <constraint firstItem="jkY-rT-zNs" firstAttribute="top" secondItem="gqP-a3-Wdx" secondAttribute="top" id="NtQ-CP-773"/>
                             <constraint firstItem="gqP-a3-Wdx" firstAttribute="trailing" secondItem="jkY-rT-zNs" secondAttribute="trailing" id="OZD-et-hU1"/>
+                            <constraint firstItem="jkY-rT-zNs" firstAttribute="top" secondItem="gqP-a3-Wdx" secondAttribute="top" id="X5x-Eb-01u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="XYQ-2s-QY7">
