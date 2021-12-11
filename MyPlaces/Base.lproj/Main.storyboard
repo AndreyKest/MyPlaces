@@ -39,7 +39,7 @@
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="map"/>
                                                     <connections>
-                                                        <segue destination="b7l-70-vmL" kind="presentation" identifier="showMap" id="Vt8-fe-SNl"/>
+                                                        <segue destination="b7l-70-vmL" kind="presentation" identifier="showPlace" id="Vt8-fe-SNl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -100,10 +100,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dj4-E7-4aL">
-                                                    <rect key="frame" x="16" y="8" width="382" height="63"/>
+                                                    <rect key="frame" x="16" y="8" width="348" height="63"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-cJ-g2e">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="20.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="asF-jh-pht"/>
                                                             </constraints>
@@ -112,7 +112,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-h1-eR6">
-                                                            <rect key="frame" x="0.0" y="28.5" width="382" height="34.5"/>
+                                                            <rect key="frame" x="0.0" y="28.5" width="348" height="34.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
@@ -121,9 +121,23 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5D-mR-I4K">
+                                                    <rect key="frame" x="372" y="43" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="589-78-eqZ"/>
+                                                        <constraint firstAttribute="width" constant="22" id="Mkv-RF-ksj"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="GetDirection"/>
+                                                    <connections>
+                                                        <segue destination="b7l-70-vmL" kind="presentation" identifier="getAdress" id="GnC-Sr-51P"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Dj4-E7-4aL" secondAttribute="trailing" constant="16" id="Swm-Dn-oGA"/>
+                                                <constraint firstItem="S5D-mR-I4K" firstAttribute="trailing" secondItem="FF9-Fb-18g" secondAttribute="trailingMargin" id="EZT-sa-VqY"/>
+                                                <constraint firstItem="S5D-mR-I4K" firstAttribute="leading" secondItem="Dj4-E7-4aL" secondAttribute="trailing" constant="8" id="bt7-r8-nsK"/>
+                                                <constraint firstItem="S5D-mR-I4K" firstAttribute="centerY" secondItem="PPY-h1-eR6" secondAttribute="centerY" id="dW8-3u-FC3"/>
                                                 <constraint firstItem="Dj4-E7-4aL" firstAttribute="top" secondItem="FF9-Fb-18g" secondAttribute="top" constant="8" id="fd3-HQ-kgo"/>
                                                 <constraint firstItem="Dj4-E7-4aL" firstAttribute="leading" secondItem="FF9-Fb-18g" secondAttribute="leading" constant="16" id="gRG-u7-EaK"/>
                                                 <constraint firstAttribute="bottom" secondItem="Dj4-E7-4aL" secondAttribute="bottom" constant="4" id="ncW-hX-iX6"/>
@@ -250,6 +264,18 @@
                                     <action selector="closeVC" destination="b7l-70-vmL" eventType="touchUpInside" id="i1M-9b-vf0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hg4-Ti-a3A">
+                                <rect key="frame" x="324" y="718" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="tiA-ku-I1Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="wOj-lx-iaj"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centreViewInUserLocation" destination="b7l-70-vmL" eventType="touchUpInside" id="P22-Ig-4Nt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ps-Bk-yKZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -257,9 +283,11 @@
                             <constraint firstAttribute="bottom" secondItem="WfQ-mO-D3Y" secondAttribute="bottom" id="8Ww-al-JOA"/>
                             <constraint firstItem="WfQ-mO-D3Y" firstAttribute="trailing" secondItem="5ps-Bk-yKZ" secondAttribute="trailing" id="9cd-12-4KI"/>
                             <constraint firstItem="WfQ-mO-D3Y" firstAttribute="top" secondItem="HX1-JK-u0J" secondAttribute="top" id="E8K-1A-LT2"/>
+                            <constraint firstItem="5ps-Bk-yKZ" firstAttribute="bottom" secondItem="Hg4-Ti-a3A" secondAttribute="bottom" constant="40" id="FZP-DN-lZi"/>
                             <constraint firstItem="3Sn-Rq-RsS" firstAttribute="top" secondItem="5ps-Bk-yKZ" secondAttribute="top" constant="40" id="RUA-ds-utZ"/>
                             <constraint firstItem="5ps-Bk-yKZ" firstAttribute="trailing" secondItem="3Sn-Rq-RsS" secondAttribute="trailing" constant="40" id="cI3-0R-PE0"/>
                             <constraint firstItem="WfQ-mO-D3Y" firstAttribute="leading" secondItem="5ps-Bk-yKZ" secondAttribute="leading" id="fw6-Za-vPb"/>
+                            <constraint firstItem="5ps-Bk-yKZ" firstAttribute="trailing" secondItem="Hg4-Ti-a3A" secondAttribute="trailing" constant="40" id="reS-yJ-rdD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -440,10 +468,13 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="Vt8-fe-SNl"/>
         <segue reference="XIa-0j-2kF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
+        <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="camcel" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
